@@ -720,11 +720,11 @@ iframe{
     bottom: 0;
     margin-top: auto;
 }
-.containerAbout{
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url("../img/font-about.jpg");
-    background-position: center;
+.containerAbout {
+    position: relative;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url("../img/font-about.jpg");
     background-size: cover;
-
+    background-position: center;
     width: 60%;
     height: 100vh;
     border: 1px solid #ccc;
@@ -732,6 +732,7 @@ iframe{
     margin: 1% auto;
     border-radius: 10px;
 }
+
 
 .body-about{
     font-family: "Arteco-typography-mono", serif;
