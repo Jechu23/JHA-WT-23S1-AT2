@@ -30,7 +30,7 @@ This is a template uses ideas from Jesus Huanambal
 The stages of development are:
 - **Part 1**: Home page and essential CSS (Complete)
 - **Part 2**: Contact Page and additional pages and CSS
-- **Part 3**: TO DO
+- **Part 3**: Demonstrations pages
 
 
 

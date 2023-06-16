@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demonstrations</title>
-  <link rel="stylesheet" href="../assets/css/reset.css">
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-  <!-- External social icons   -->
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+
+
+
+
+
+    <!-- External social icons   -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://kit.fontawesome.com/75f4c02b3b.js" crossorigin="anonymous"></script>
 
@@ -39,7 +47,7 @@
 
 <div class="demos-container">
     <div class="content-project">
-        <h1> <span>Clock and Times Table</span> </h1>
+        <h1> <span>Demonstrations</span> </h1>
     </div>
     <section>
         <aside class="border border-slate-500
@@ -47,7 +55,7 @@
                     text-center items-center content-center
                     flex flex-col gap-4">
             <header>
-                <h3>My Wonderful Clock</h3>
+                <h3>My Clock</h3>
             </header>
             <section class="flex flex-col gap-4">
                 <p id="date"></p>
@@ -56,10 +64,10 @@
             </section>
         </aside>
     </section>
-    <div>
-        <section class="border border-gray-800 p-4 rounded-lg bg-gray-200 flex flex-col gap-4">
-            <h3 class="text-xl text-green-700">A Form</h3>
 
+
+        <section class="border border-gray-800 p-4 rounded-lg bg-gray-200 flex flex-col gap-4">
+            <h3 class="text-xl text-green-700">Times Table</h3>
             <form action="" id="simpleFrom" method="post">
                 <div class="flex flex-row my-2">
                     <label for="numberInput" class="w-32 py-2">Enter number from 1 to 20:</label>
@@ -87,13 +95,25 @@
                 </div>
             </section>
         </div>
-    </div>
+
+    <section class="border border-gray-800 p-4 rounded-lg bg-gray-200 mt-4">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl text-green-700">Weather</h3>
+            <form id="search-form" class="mb-4">
+                <label for="search-input" class="sr-only">Enter city name</label>
+                <input id="search-input" type="text" placeholder="Enter city name" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                <button type="submit" class="px-4 py-2 transition ease-in-out duration-1000 rounded border border-green-800 text-green-300 bg-green-800 hover:bg-green-300 hover:text-green-800 mr-2">Search</button>
+            </form>
+            <div id="weather-demo" class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+        </div>
+    </section>
+
 </div>
 
 <footer class="footer-site">
     <!-- (div>{Footer Column})*2 -->
-    <div>
 
+    <div>
         <p class="small"> <br><br>This site is part of my learning for Web Technologies at TAFE. </p>
         <div class="social-icons">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -107,6 +127,6 @@
         <p>&copy;Copyright 2022 Oswaldo Jesus. Designed by <span>J3hual</span></p>
     </div>
 </footer>
-
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
