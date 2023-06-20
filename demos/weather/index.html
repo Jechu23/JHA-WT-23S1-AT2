@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demonstrations</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+  <!-- External social icons   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/75f4c02b3b.js" crossorigin="anonymous"></script>
+
+  <!-- tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS   -->
+  <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/portfolio.css">
+
+  <script src="https://kit.fontawesome.com/75f4c02b3b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header class="header-site">
+
+  <nav class="nav-site">
+    <a href="../.." class="nav-button">Home</a>
+    <a href="../../about" class="nav-button">About</a>
+    <a href="../../resume" class="nav-button ">Resume</a>
+    <a href="../../projects" class="nav-button">Projects</a>
+    <a href=".." class="nav-button active">Demos</a>
+    <a href="../../contact" class="nav-button">Contact Us</a>
+  </nav>
+  <div>
+    <img src="https://via.placeholder.com/64/000000/ffffff" alt = logo>
+  </div>
+</header>
+
+<div class="demos-container">
+  <div class="content-project">
+    <h1> <span>Demonstrations</span> </h1>
+  </div>
+  <section class="border border-gray-800 p-4 rounded-lg bg-gray-200 mt-4">
+    <div class="container mx-auto px-4">
+      <h3 class="text-xl text-green-700">Weather</h3>
+      <form id="search-form" class="mb-4">
+        <label for="search-input" class="sr-only">Enter city name</label>
+        <input id="search-input" type="text" placeholder="Enter city name" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        <button type="submit" class="px-4 py-2 transition ease-in-out duration-1000 rounded border border-green-800 text-green-300 bg-green-800 hover:bg-green-300 hover:text-green-800 mr-2">Search</button>
+      </form>
+      <div id="weather-demo" class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="footer-site">
+  <!-- (div>{Footer Column})*2 -->
+
+  <div>
+    <p class="small"> <br><br>This site is part of my learning for Web Technologies at TAFE. </p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy;Copyright 2022 Oswaldo Jesus. Designed by <span>J3hual</span></p>
+  </div>
+</footer>
+<script src="../../assets/js/weather.js"></script>
+</body>
+</html>
