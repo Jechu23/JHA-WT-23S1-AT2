@@ -1,17 +1,14 @@
+/* DIGITAL CLOCK */
 let dom = document;
-
-const currentDate = new Date()
+const currentDate = new Date();
 const dateElement = dom.getElementById('date');
 dateElement.textContent = currentDate.toDateString();
-
 function _updateClock(){
   const currentTime = new Date();
   const hours = currentTime.getHours().toString().padStart(2,'0');
   const minutes = currentTime.getMinutes().toString().padStart(2,'0');
   const seconds = currentTime.getSeconds().toString().padStart(2,'0');
-
   const timeString = hours + ':' + minutes + ':' + seconds;
-
   const clockElement = dom.getElementById('clock');
   clockElement.textContent = timeString;
 }
@@ -19,11 +16,9 @@ _updateClock();
 setInterval(_updateClock, 500);
 
 
-/*times table*/
-
+/*TIMES TABLE*/
 const form = dom.getElementById('simpleFrom');
 form.addEventListener('submit', generateTimesTable);
-
 function generateTimesTable(event)
 {
   event.preventDefault();
@@ -31,13 +26,11 @@ function generateTimesTable(event)
   const outputZone = dom.getElementById('outputZone');
   const inputValue = numberInput.value;
   outputZone.innerHTML = '';
-
   if(inputValue === '')
   {
     outputZone.innerHTML = 'Please enter number from 1 to 20:';
     return;
   }
-
   const num = parseInt(inputValue, 10);
   if(num <1 || num >20)
   {
@@ -55,7 +48,7 @@ function generateTimesTable(event)
   }
 }
 
-// weather
+// WEATHER
 dom.addEventListener("DOMContentLoaded", function() {
   const weatherDemo = dom.getElementById("weather-demo");
   const apiKey = "e8c85f0a52927734e8ef25087f99ec6c";
