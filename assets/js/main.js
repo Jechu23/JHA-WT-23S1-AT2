@@ -4,6 +4,11 @@ const currentDate = new Date();
 const dateElement = dom.getElementById('date');
 dateElement.textContent = currentDate.toDateString();
 let isColonVisible = true;
+const clockElement = dom.getElementById('clock');
+const colonElement = dom.createElement('span');
+colonElement.id = 'colon';
+colonElement.style.fontSize = 'inherit';
+clockElement.appendChild(colonElement);
 
 function _updateClock() {
   const currentTime = new Date();
@@ -18,13 +23,9 @@ function _updateClock() {
       period = 'PM';
     }
     hours = hours % 12 || 12; // Convert to 12-hour format
-    const timeString = hours.toString().padStart(2, '0') + '<span id="colon" style="font-size: inherit;">' + (isColonVisible ? ':' : '&nbsp;') + '</span>' + minutes + ' ' + period;
-    const clockElement = dom.getElementById('clock');
-    clockElement.innerHTML = timeString;
+    clockElement.innerHTML = hours.toString().padStart(2, '0') + (isColonVisible ? ':' : '&nbsp;') + minutes + ' ' + period;
   } else {
-    const timeString = hours.toString().padStart(2, '0') + '<span id="colon" style="font-size: inherit;">' + (isColonVisible ? ':' : '&nbsp;') + '</span>' + minutes;
-    const clockElement = dom.getElementById('clock');
-    clockElement.innerHTML = timeString;
+    clockElement.innerHTML = hours.toString().padStart(2, '0') + (isColonVisible ? ':' : '&nbsp;') + minutes;
   }
 
   // Toggle the visibility of the colon every half-second
@@ -33,6 +34,8 @@ function _updateClock() {
 
 _updateClock();
 setInterval(_updateClock, 500);
+
+
 
 
 
