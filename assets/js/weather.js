@@ -1,5 +1,4 @@
 // WEATHER
-
 let dom = document;
 dom.addEventListener("DOMContentLoaded", function() {
   const weatherDemo = dom.getElementById("weather-demo");

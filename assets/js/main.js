@@ -3,17 +3,38 @@ let dom = document;
 const currentDate = new Date();
 const dateElement = dom.getElementById('date');
 dateElement.textContent = currentDate.toDateString();
-function _updateClock(){
+let isColonVisible = true;
+
+function _updateClock() {
   const currentTime = new Date();
-  const hours = currentTime.getHours().toString().padStart(2,'0');
-  const minutes = currentTime.getMinutes().toString().padStart(2,'0');
-  const seconds = currentTime.getSeconds().toString().padStart(2,'0');
-  const timeString = hours + ':' + minutes + ':' + seconds;
-  const clockElement = dom.getElementById('clock');
-  clockElement.textContent = timeString;
+  let hours = currentTime.getHours();
+  const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+
+  // Check if the clock should be displayed in 12-hour or 24-hour format
+  let timeFormat = '12-hour';
+  if (timeFormat === '12-hour') {
+    let period = 'AM';
+    if (hours >= 12) {
+      period = 'PM';
+    }
+    hours = hours % 12 || 12; // Convert to 12-hour format
+    const timeString = hours.toString().padStart(2, '0') + '<span id="colon" style="font-size: inherit;">' + (isColonVisible ? ':' : '&nbsp;') + '</span>' + minutes + ' ' + period;
+    const clockElement = dom.getElementById('clock');
+    clockElement.innerHTML = timeString;
+  } else {
+    const timeString = hours.toString().padStart(2, '0') + '<span id="colon" style="font-size: inherit;">' + (isColonVisible ? ':' : '&nbsp;') + '</span>' + minutes;
+    const clockElement = dom.getElementById('clock');
+    clockElement.innerHTML = timeString;
+  }
+
+  // Toggle the visibility of the colon every half-second
+  isColonVisible = !isColonVisible;
 }
+
 _updateClock();
 setInterval(_updateClock, 500);
+
+
 
 
 /*TIMES TABLE*/
@@ -47,9 +68,3 @@ function generateTimesTable(event)
     outputZone.appendChild(equationEl);
   }
 }
-
-
-
-
-
-
